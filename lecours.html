@@ -1,0 +1,161 @@
+﻿<!DOCTYPE html>
+<html>
+	<head>
+    	<meta charset="uft-8" />
+    	<title> FPC </title>
+        <link rel="stylesheet" type="text/css" href="style_lecours.css">
+        <!-- J'ai remis la feuille de style de l'index comme il y a des similarités -->
+        <link rel="stylesheet" type="text/css" href="style_index.css">
+    	<link href="https://fonts.googleapis.com/css?family=Fira+Sans+Extra+Condensed" rel="stylesheet"> 
+    </head>
+
+    <body>
+    	<header>
+    		<h1 id="Freepascal"> Free Pascal : Le cours </h1>
+    	</header>
+
+    	<nav><h2> Menu </h2>
+    		<ul>
+            <li><a href="site_pascal.html" title="Accueil"> Accueil </a></li>
+    		<li><a href="lecours.html" title="Le cours"> Le cours </a></li>
+    		<li><a href="contact.html" title="Contact"> Contact </a></li>
+    		<li><a href="http://wiki.freepascal.org/Variables_and_Data_Types/fr" title="Site Free Pascal" target="blank"> Free Pascal Wiki </a></li>
+    		</ul>
+    	</nav>
+
+        <section>
+            <article>
+                <p class="titre"> Les Types/Variables : </p>
+                <ul id="liste">
+                <li>Les entiers</li>
+                <li>Les réels</li>    
+                <li>Les caractères</li>    
+                <li>Les chaînes de caractères</li>    
+                <li>Les booléens</li>                        
+                </ul>
+            </article>
+
+            <article>
+                <p class="titre"> Les ruptures conditionnelles : </p>
+                <p>
+                    - SI(condition) ALORS (instructions) </br>
+                    FINSI </br>
+
+                    - SI(condition) ALORS (instructions) </br>
+                    SINON </br>
+                    (instructions) </br>
+                    FINSI </br>
+
+                    - CAS..PARMIS </br>
+                </p>
+            </article>
+
+            <article>
+                <p class="titre"> Les boucles : </p>
+                <p>
+                    while do → tant que c'est vrai je fais.
+                    Pas obligé de rentrer dedans.
+                    On test l'expression au départ de la boucle. </br>
+
+                    Repeat – until → rentre dedans au moins une fois.</br>
+                    
+                    For – do → valeur_début TO valeur_fin DO instruction
+                </p>
+            </article>
+
+            <article>
+                <p class="titre"> Tableaux unidimensionnels : </p>
+                <p>
+
+
+                    VAR </br>
+                        nom_tableau : ARRAY [type_index] OF type_composantes </br>
+
+                    {Exemple} </br>
+                    CONST dimension = 3 ; </br>
+                    VAR </br>
+                        vecteur1, vecteur2 : ARRAY [1..dimension] OF real </br>
+
+                    <em> Les tableaux à 1 dimension (vecteurs) : </em> </br>
+
+                    syntaxe : Type<nom_du_tableau> = Tableau[1..N] de <TypeElt> </br>
+
+                    <em> Les tableaux à 2 dimensions : </em></br>
+
+                    syntaxe : Type<nom_du_tableau> = Tableau[1..N,1..N] de <TypeElt> </br>
+            </article>
+
+            <article>
+                <p class="titre"> Les procédures : </p>
+                <p>
+                    PROCEDURE<nom_de_la_procédure> [(liste des paramètres : type)] </br>
+                    VAR : liste des variables </br>
+
+                    DEBUT {corps de la procédure} </br>
+                    (liste des actions) {la liste ne doit pas être vide} </br>
+                    FINPROCEDURE
+                </p>
+
+            </article>
+
+            <article>
+                <p class="titre"> Les Fonctions : </p>
+                <p>
+                    Retourne un type ( ex. un entier). </br>
+
+                    FONCTION<nom_de_le_fonction>[(liste des paramètres : type)] : type_fonction </br>
+                        var : </br>
+                            liste des variables </br>
+                        DEBUT {corps de la fonction} </br>
+                        (liste des actions) {la liste ne doit pas être vide} </br>
+                        nom_de_la_fonction ← résultat_des_calculs </br>
+                        FINFONCTION </br>
+                </p>
+            </article>
+
+            <article>
+                <p class="titre"> Les paramètres </p>
+                <p>
+                    <em> Il existe 2 types : </em> </br>
+                    Les paramètres formels → Ce sont la définition du nombre et du type de valeurs que devra recevoir le sous-programme pour se mettre en route avec succès. Déclaré pendant la déclaration du sous-programme. </br>
+
+                    Les paramètres effectifs → Ce sont des valeurs réelles (const. ou variables) reçues par le sous-programme au cours de l’exécution du bloc principal. On les définit indépendamment à chaque appel du sous-programme dans l'algorithme principal. </br>
+                    </br>
+                    <em> 1) Passage paramètre par valeur : </em> </br>
+                    Utiliser la valeur de la variable et à la sortie du sous-programme lui restituer cette valeur malgré les éventuelles modifications subies. </br>
+                    <em> Syntaxe : </em> </br>
+                    PROCEDURE(nom_procédure) (param1 : type1 ; param2, param3: type2) </br>
+                    FONCTION(nom_fonction) (param1 : type1 ; param2, param3 : type2) : Type </br>
+                    <em> 2) Passage paramètre par adresse (ou par variable) : </em> </br>
+                    Permet de modifier la nouvelle valeur à la sortie. </br>
+                    FONCTION(nom_fonction) (var param1 : type1 ; var param2, var param3: type2) 
+                </p>       
+            </article>
+
+            <article>
+                <p class="titre"> Les enregistrements : </p>
+                <p>
+                    Permet de créer une sorte de conteneur qui peut avoir plusieurs attributs/champs. Possibilité d'avoir des types différents ! </br>
+                    Ex : Un point est un entier(x, y, z) avec une couleur. </br>
+                    La déclaration d'un objet de type Enregistrement se fait de manière suivante : </br>
+                    TYPE(nom_objet) = Enregistrement </br>
+                    (champ 1) : (type1) </br>
+                    (champ 2) : (type2) </br>
+                    (champ 3) : (type3) </br>
+                    FINENREGISTREMENT </br>
+                    Remarques : </br>
+                    (champ i) → variable à part entière représentant une propriété de l'objet. </br>
+                    (type i) = type de <champ i> indépendant des autres types de l'objet. Ainsi il peut être simple ou composé, à condition d'être défini avant l'enregistrement. </br>
+                    Manipuler un objet de type enregistrement revient à manipuler chacun des champs qui les constituent. Cela se fait grâce à la variable Nom_objet.nom_champ. </br>
+                    Ex : voitures.garantie ←  vrai ou encore Lire(voitures.puissance) </br>
+                    NB : Nom_objet.nom-champ.nom_sous_champ </br>
+                </p>
+                <a href="#Freepascal"> Haut de page </a> <br/>
+            </article>
+        </section>
+
+
+    </body>
+
+
+</html>

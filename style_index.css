@@ -1,0 +1,66 @@
+body{
+	background-image: url("image/scandi.png");
+	font-family: 'Fira Sans Extra Condensed', sans-serif;
+	background-attachment: fixed;
+}
+
+#foot{
+	text-align: center;
+	margin-top: 185px;
+}
+
+h1{
+	text-align: center;
+	text-decoration: underline;
+}
+
+h2{
+	margin-left: 48px;
+}
+
+h3{
+	margin-top: auto;
+}
+
+/*Construction de mon menu en css*/
+nav{ 
+	border: 5px;
+	border-radius: 10px;
+	display: block;
+	width: 146px;
+	background-color: aliceblue;
+	float: left;
+}
+
+li a{
+	text-align: left;
+	color: black;
+	text-decoration: none;
+	margin-top: 6%;
+}
+
+li a:hover{ 
+	color:red;
+	text-decoration: none;
+
+}
+
+li a:active{
+	color: white;
+}
+
+article{
+	text-align: center;
+	margin-left: 230px;
+	margin-right: 130px;
+	min-width: 250px;
+}
+
+p{
+	text-align: justify;
+	margin-top: 25px;
+}
+
+ul{
+	padding-bottom: 10px;
+}
